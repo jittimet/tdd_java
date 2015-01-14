@@ -1,3 +1,5 @@
+package com.ais.captcha;
+
 import java.util.Random;
 public class Randomizer {
     private Random random;

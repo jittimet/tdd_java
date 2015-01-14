@@ -1,3 +1,4 @@
+import com.ais.captcha.Randomizer;
 import org.junit.Test;
 
 import java.util.Random;

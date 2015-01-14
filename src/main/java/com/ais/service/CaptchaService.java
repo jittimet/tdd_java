@@ -1,7 +1,11 @@
-import java.awt.peer.CanvasPeer;
-import java.io.FileWriter;
+package com.ais.service;
+
+import com.ais.captcha.Captcha;
+import com.ais.captcha.Randomizer;
+import com.ais.log.FileLogger;
+import com.ais.log.Logger;
+
 import java.io.IOException;
-import java.io.Writer;
 import java.util.Date;
 
 /**
@@ -11,6 +15,7 @@ public class CaptchaService {
     private Randomizer randomizer;
 
     private Logger logger;
+
     public CaptchaService() throws IOException {
         this.randomizer = new Randomizer();
     }
@@ -23,7 +28,7 @@ public class CaptchaService {
         this.randomizer = randomizer;
     }
 
-    public String getCaptcha() throws IOException {
+    public String getCaptcha() throws Exception {
         int pattern = randomizer.getPattern();
         int leftOperand = randomizer.getOperand();
         int operator = randomizer.getOperator();

@@ -1,3 +1,5 @@
+package com.ais.captcha;
+
 import com.sun.javafx.binding.StringFormatter;
 
 public class Captcha {
